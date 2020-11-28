@@ -1,10 +1,15 @@
-﻿using Group_Assignment_4.Models;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Group_Assignment_4.Models;
 using Newtonsoft.Json;
-using System;
 using System.Net.Http;
+using System.Reflection;
 
-namespace DataGov_API_Intro.Controllers
+namespace Federal_Election.Controllers
 {
     public class HomeController : Controller
     {
@@ -17,7 +22,7 @@ namespace DataGov_API_Intro.Controllers
         // data.gov developer network, i.e. all data sources on data.gov.
         // https://www.nps.gov/subjects/developer/get-started.htm
 
-        public IActionResult Index()
+        public IActionResult Parks()
         {
             httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Accept.Clear();
@@ -25,7 +30,7 @@ namespace DataGov_API_Intro.Controllers
             httpClient.DefaultRequestHeaders.Accept.Add(
                 new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 
-            string NATIONAL_PARK_API_PATH = BASE_URL + "/parks?limit=20";
+            string NATIONAL_PARK_API_PATH = BASE_URL + "/parks?limit=5";
             string parksData = "";
 
             Parks parks = null;
@@ -55,5 +60,51 @@ namespace DataGov_API_Intro.Controllers
 
             return View(parks);
         }
+
+        public IActionResult Tours()
+        {
+            httpClient = new HttpClient();
+            httpClient.DefaultRequestHeaders.Accept.Clear();
+            httpClient.DefaultRequestHeaders.Add("X-Api-Key", API_KEY);
+            httpClient.DefaultRequestHeaders.Accept.Add(
+                new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+
+            string TOUR_API_PATH = BASE_URL + "/tours?limit=5";
+            string toursData = "";
+
+            Tours tours = null;
+
+            httpClient.BaseAddress = new Uri(TOUR_API_PATH);
+
+            try
+            {
+                HttpResponseMessage response = httpClient.GetAsync(TOUR_API_PATH).GetAwaiter().GetResult();
+
+                if (response.IsSuccessStatusCode)
+                {
+                    toursData = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
+                }
+
+                if (!toursData.Equals(""))
+                {
+                    // JsonConvert is part of the NewtonSoft.Json Nuget package
+                    tours = JsonConvert.DeserializeObject<Tours>(toursData);
+                }
+            }
+            catch (Exception e)
+            {
+                // This is a useful place to insert a breakpoint and observe the error message
+                Console.WriteLine(e.Message);
+            }
+
+            return View(tours);
+        }
+
+
+        public IActionResult Index()
+        {
+            return View();
+        }
+
     }
 }

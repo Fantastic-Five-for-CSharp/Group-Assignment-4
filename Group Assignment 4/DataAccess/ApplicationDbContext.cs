@@ -6,10 +6,11 @@ namespace Group_Assignment_4.DataAccess
 {
     public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-            : base(options) { }
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
+        public DbSet<Parks> Parks { get; set; }
+        public DbSet<Park> Park { get; set; }
+        public DbSet<Tours> Tours { get; set; }
+        public DbSet<Tour> Tour { get; set; }
 
-        public DbSet<Parks> Park { get; set; }
-        public DbSet<Tours> Tour { get; set; }
     }
 }

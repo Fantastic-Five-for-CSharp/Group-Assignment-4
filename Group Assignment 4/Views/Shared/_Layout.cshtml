@@ -1,30 +1,64 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<!doctype html>
+<html lang="en">
+
 <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - TradingApp</title>
-    <link rel="stylesheet" href="~/css/site.css" />
-    <script type="text/javascript" src="~/js/Chart.min.js"></script>
-    <script type="text/javascript" src="~/lib/chartjs-plugin-annotation-master/chartjs-plugin-annotation.min.js"></script>
-    <script type="text/javascript" src="~/js/site.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Google fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+    <!-- locally defined CSS -->
+    <link rel="stylesheet" type="text/css" href="~/css/site.css" />
+
+    <style>
+        footer {
+            display: block;
+            background-color: #00392a;
+            text-align: center;
+            color: #c2b163;
+            position: sticky;
+            bottom: 0px;
+        }
+    </style>
+
 </head>
+
 <body>
-    <nav>
-        <div class="nav-bar">
-            <a asp-area="" asp-controller="Home" asp-action="Index">Home </a><text> | </text>
-            <a asp-area="" asp-controller="Home" asp-action="ParkExploration">ParkExploration</a><text> | </text>
-            <a asp-area="" asp-controller="Home" asp-action="Chart">Chart </a><text> | </text>
-            <a asp-area="" asp-controller="Home" asp-action="Refresh">Refresh </a><text> | </text>
-        </div>
+    <nav class="navbar navbar-expand navbar-custom">
+        <ul class="navbar-nav mr-auto font-weight-bold">
+
+            </li>
+            <li class="nav-item">
+                <a asp-controller="Home" asp-action="Parks" class="btn btn-primary my-2">Park Information</a>
+            </li>
+            <li class="nav-item">
+                <a asp-controller="Home" asp-action="Tours" class="btn btn-primary my-2">Explore Tours Information</a>
+            </li>
+            
+        </ul>
     </nav>
-    <div class="container body-content">
+ 
+
+    <main role="main">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>ISDS, Muma College of Business, University of South Florida</p>
-        </footer>
-    </div>
+    </main>
+
+    <footer>
+        <a href="https://www.eia.gov/opendata/qb.php" target="_blank">Source Data</a> | <a href="http://www.usf.edu/" target="_blank">USF</a> | <a href="mailto:aston@usf.edu;%20jlong4@usf.edu;%20mborkland@usf.edu?subject=Energy%20Insights%20Project">Contact Us</a> | <a asp-controller="Privacy" asp-action="Index">Privacy</a>
+        <br />
+     
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

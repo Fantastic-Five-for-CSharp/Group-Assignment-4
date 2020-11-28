@@ -150,3 +150,9 @@ footer{
   padding-top: 5px;
   color: #fff;
 }
+<style >
+#foo {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}

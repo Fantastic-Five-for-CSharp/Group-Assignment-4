@@ -1,0 +1,50 @@
+﻿@model Group_Assignment_4.Models.Tours
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+</style>
+<h2> Tour Information </h2>
+<hr />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Tour Titile
+            </th>
+            <th>
+                Tour ID
+            </th>
+            <th>
+                Description
+            </th>
+         
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model.data)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.description)
+            </td>
+       
+
+        </tr>
+        }
+        <tr>
+            <td>
+                <a id="dbopt" asp-controller="Home" asp-action="PopulateSymbols"><img src="~/images/button_save-data.png" /></a>
+            </td>
+        </tr>
+    </tbody>
+</table>
