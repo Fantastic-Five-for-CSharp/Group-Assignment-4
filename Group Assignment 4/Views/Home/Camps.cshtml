@@ -1,33 +1,34 @@
-﻿@model Group_Assignment_4.Models.Parks
+﻿@model Group_Assignment_4.Models.Camps
 
 <style>
     table, th, td {
         border: 1px solid black;
     }
-
     table {
         max-width: 2200px;
         margin-left: auto;
         margin-right: auto;
     }
 </style>
-<h2 align="center"> Park Information </h2>
+<h2 align="center"> Camps Information </h2>
 <hr />
 <table class="table table-responsive-sm table-striped text-center pb-2 mb-2 resp">
     <thead>
         <tr>
             <th>
-                Park Name
+                Camp Name
             </th>
             <th>
-                Park ID
+                Camp ID
+            </th>`
+            
+            <th>
+                Description
             </th>
             <th>
-                State
+                Reservation Info
             </th>
-            <th>
-                Park Descritpion
-            </th>
+          
         </tr>
     </thead>
 
@@ -39,16 +40,17 @@
             <td>
                 @Html.DisplayFor(modelItem => item.name)
             </td>
-
             <td>
                 @Html.DisplayFor(modelItem => item.id)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.states)
-            </td>
+
             <td>
                 @Html.DisplayFor(modelItem => item.description)
             </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.reservationInfo)
+            </td>
+
 
 
         </tr>

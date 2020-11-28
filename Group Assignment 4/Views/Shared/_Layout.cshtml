@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 
     <!-- locally defined CSS -->
-    <link rel="stylesheet" type="text/css" href="~/css/site.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/style.css" />
 
     <style>
         footer {
@@ -32,14 +32,22 @@
     <nav class="navbar navbar-expand navbar-custom">
         <ul class="navbar-nav mr-auto font-weight-bold">
 
+            <li class="nav-item">
+                <a asp-controller="Home" asp-action="Index" class="btn btn-primary my-2">Home</a>
             </li>
+
             <li class="nav-item">
                 <a asp-controller="Home" asp-action="Parks" class="btn btn-primary my-2">Park Information</a>
             </li>
             <li class="nav-item">
                 <a asp-controller="Home" asp-action="Tours" class="btn btn-primary my-2">Explore Tours Information</a>
             </li>
-            
+            <li class="nav-item">
+                <a asp-controller="Home" asp-action="Camps" class="btn btn-primary my-2">Explore Camps Information</a>
+            </li>
+            <li class="nav-item">
+                <a asp-controller="Home" asp-action="AboutUs" class="btn btn-primary my-2">About Us</a>
+            </li>
         </ul>
     </nav>
  

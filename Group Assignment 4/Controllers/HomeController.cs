@@ -101,10 +101,52 @@ namespace Federal_Election.Controllers
         }
 
 
+   
+        public IActionResult Camps()
+        {
+            httpClient = new HttpClient();
+            httpClient.DefaultRequestHeaders.Accept.Clear();
+            httpClient.DefaultRequestHeaders.Add("X-Api-Key", API_KEY);
+            httpClient.DefaultRequestHeaders.Accept.Add(
+                new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+
+            string CAMPGROUND_API_PATH = BASE_URL + "/campgrounds?limit=5";
+            string campsData = "";
+
+            Camps camps = null;
+
+            httpClient.BaseAddress = new Uri(CAMPGROUND_API_PATH);
+
+            try
+            {
+                HttpResponseMessage response = httpClient.GetAsync(CAMPGROUND_API_PATH).GetAwaiter().GetResult();
+
+                if (response.IsSuccessStatusCode)
+                {
+                    campsData = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
+                }
+
+                if (!campsData.Equals(""))
+                {
+                    // JsonConvert is part of the NewtonSoft.Json Nuget package
+                    camps = JsonConvert.DeserializeObject<Camps>(campsData);
+                }
+            }
+            catch (Exception e)
+            {
+                // This is a useful place to insert a breakpoint and observe the error message
+                Console.WriteLine(e.Message);
+            }
+
+            return View(camps);
+        }
         public IActionResult Index()
         {
             return View();
         }
-
+        public IActionResult AboutUs()
+        {
+            return View();
+        }
     }
 }

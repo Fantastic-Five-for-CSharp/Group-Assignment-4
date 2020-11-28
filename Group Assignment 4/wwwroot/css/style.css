@@ -156,3 +156,8 @@ footer{
     bottom: 0;
     right: 0;
 }
+
+table {
+    table-layout: auto;
+    border: 1px solid black;
+}
