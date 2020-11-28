@@ -1,0 +1,57 @@
+﻿@model Group_Assignment_4.Models.Parks
+@{
+   ViewData["Title"] = "ParkExploration";   
+ }
+
+
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+</style>
+<h2> National Park Information</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Park Name
+            </th>
+            <th>
+                Park ID
+            </th>
+            <th>
+                Park Code
+            </th>
+            <th>
+                Weather Info
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model.data)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.parkCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.weatherInfo)
+                </td>
+           
+            </tr>
+        }
+        <tr>
+            <td>
+                <a id="dbopt" asp-controller="Home" asp-action="PopulateSymbols"><img src="~/images/button_save-data.png" /></a>
+            </td>
+        </tr>
+    </tbody>
+</table>
