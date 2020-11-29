@@ -1,0 +1,910 @@
+﻿
+@{
+    ViewData["Title"] = "About us";
+}
+
+<div class="container">
+    <h1 class="jumbotron-heading">@ViewData["Title"]</h1>
+    <p>We are group 5 from DIS class.</p>
+    <a class="btn btn-primary my-2" href="https://github.com/yusi64659779/Federal-Election-Commission" target="_blank">GitHub</a>
+    <a class="btn btn-primary my-2" asp-action="ERD">ERD Diagram</a>
+    </p>
+</div>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <img src="img/p1.jpg" class="profile-img" width="140" height="140">
+                <h2>Qian Wang</h2>
+                <p>
+                    Qian Wang is a Business Analytics and Information Systems graduate student at University of South Florida. She is a highly effective data analyst with excellent problem-solving skills. She is also a good team player, and is able to lead projects as well as participate actively as a team member. In this assignment, she is responible for building the home page, about us page.
+                    <a href="https://github.com/Fantastic-Five-for-CSharp/Assignment3_Group5" style="color:yellow">Git_page</a>
+                </p>
+            </th>
+            <th>
+                <img src="img/p2.jpg" class="profile-img" width="140" height="140">
+                <h2>You Zhou</h2>
+                <p>
+                    You Zhou is currently pursuing the BAIS degree in the USF Muma college of Business.He has a background of Business Adminstration and relatied experience in Project Management Process Enhencement.
+                    He worked on the Mainpage as well as the related css files. And original data acquisition with cleaning process.
+                    <a href="https://github.com/Fantastic-Five-for-CSharp/Assignment3_Group5" style="color:yellow">Git_page</a>
+                </p>
+            </th>
+            <th>
+                <img src="img/p3.jpg" class="profile-img" width="140" height="140">
+                <h2>Shitao Liao</h2>
+                <p>
+                    Shitao Liao is now persuing his master's degree in business analytics and information systems at University of South Florida. His interest areas are database design and data analysis. He is responsible for the design of detail page and data model.
+                    <a href="https://github.com/Fantastic-Five-for-CSharp/Assignment3_Group5" style="color:yellow">Git_page</a>
+                </p>
+            </th>
+        </tr>
+    </thead>
+</table>
+
+<div class="row">
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <div id="chartContainer1" style="width: 31%; height: 160px;display: inline-block;"></div>
+    <div id="chartContainer2" style="width: 32%; height: 160px;display: inline-block;"></div>
+    <div id="chartContainer3" style="width: 31%; height: 160px;display: inline-block;"></div>
+    <script>
+        var chart = new CanvasJS.Chart("chartContainer1",
+            {
+                animationEnabled: true,
+                title: {
+                    text: "Qian's Contribution",
+                },
+                data: [
+                    {
+                        type: "pie",
+                        showInLegend: true,
+                        indexLabel: "{label} - #percent%",
+                        toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+                        dataPoints: [
+                            { y: 30, label: "API Use", color: "rgb(30,144,255)" },
+                            { y: 35, label: "Database Design", color: "rgb(65,105,225)" },
+                            { y: 37, label: "View Design", color: "rgb(0,0,128)" },
+                        ]
+                    },
+                ]
+            });
+        chart.render();
+
+        var chart = new CanvasJS.Chart("chartContainer2",
+            {
+                animationEnabled: true,
+                title: {
+                    text: "You's Contribution",
+                },
+                data: [
+                    {
+                        type: "pie",
+                        showInLegend: true,
+                        indexLabel: "{label} - #percent%",
+                        toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+                        dataPoints: [
+                            { y: 30, label: "API Use", color: "rgb(301,144,255)" },
+                            { y: 35, label: "Database Design", color: "rgb(615,101,225)" },
+                            { y: 37, label: "View Design", color: "rgb(20,40,128)" },
+                        ]
+                    },
+                ]
+            });
+        chart.render();
+
+        var chart = new CanvasJS.Chart("chartContainer3",
+            {
+                animationEnabled: true,
+                title: {
+                    text: "Shitao's Contribution",
+                },
+                axisY: {
+                    title: "Percentile"
+                },
+                data: [
+                    {
+                        type: "pie",
+                        showInLegend: true,
+                        indexLabel: "{label} - #percent%",
+                        toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+                        dataPoints: [
+                            { y: 30, label: "API Use", color: "rgb(301,144,255)" },
+                            { y: 35, label: "Database Design", color: "rgb(651,105,225)" },
+                            { y: 37, label: "View Design", color: "rgb(101,10,128)" },
+                        ]
+                    },
+                ]
+            });
+        chart.render();
+    </script>
+</div>
+</div>
+
+
+    ViewData["Title"] = "About us";
+}
+
+<div class="container">
+    <h2 class="jumbotron-heading" align="center">@ViewData["Title"]</h2>
+    @*<a align="center" class="btn btn-primary my-2" href="https://github.com/Fantastic-Five-for-CSharp/Group-Assignment-4" target="_blank">GitHub</a>*@
+
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <img src="../img/p1.jpg" class="profile-img" width="130" height="140">
+                <h2>Qian Wang</h2>
+                <p>
+                    Qian Wang is a Business Analytics and Information Systems graduate student at University of South Florida. She is a highly effective data analyst with excellent problem-solving skills. She is also a good team player, and is able to lead projects as well as participate actively as a team member. In this assignment, she is responible for data model, update index and about us page and refinement.
+                    <a href="https://github.com/Fantastic-Five-for-CSharp/Group-Assignment-4" style="color:#2593D3">Git_page</a>
+                </p>
+            </th>
+            <th>
+                <img src="../img/p2.jpg" class="profile-img" width="130" height="140">
+                <h2>You Zhou</h2>
+                <p>
+                    You Zhou is currently pursuing the BAIS degree in the USF Muma college of Business.He has a background of Business Adminstration and relatied experience in Project Management Process Enhencement.
+                    He worked on api, data display, crud function, and deploy of the project.
+                    <a href="https://github.com/Fantastic-Five-for-CSharp/Group-Assignment-4" style="color:#2593D3">Git_page</a>
+                </p>
+            </th>
+            <th>
+                <img src="../img/p3.jpg" class="profile-img" width="130" height="140">
+                <h2>Shitao Liao</h2>
+                <p>
+                    Shitao Liao is now persuing his master's degree in business analytics and information systems at University of South Florida. His interest areas are database design and data analysis. He is responsible for the design of detail pages.
+                    <a href="https://github.com/Fantastic-Five-for-CSharp/Group-Assignment-4" style="color:#2593D3">Git_page</a>
+                </p>
+            </th>
+        </tr>
+    </thead>
+</table>
+<hr />
+<hr />
+
+<div class="row">
+
+    <h2 align="center">Data Chart</h2>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <div id="parkchart1" style="width: 31%; height: 160px;display: inline-block"></div>
+    <div id="parkchart2" style="width: 31%; height: 160px;display: inline-block"></div>
+    <div id="parkchart3" style="width: 31%; height: 160px;display: inline-block"></div>
+    <script>
+
+
+        var chart = new CanvasJS.Chart("parkchart1",
+            {
+                animationEnabled: true,
+                title: {
+                    text: "Number of Parks By State",
+                },
+                axisY: {
+                    title: "Number of parks"
+                },
+                data: [
+                    {
+                        type: "pie",
+                        showInLegend: false,
+
+                        toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+                        dataPoints: [
+                            { y: 11, label: "FL", color: "rgb(135,206,120)" },
+                            { y: 28, label: "CA", color: "rgb(0,191,255)" },
+                            { y: 14, label: "TX", color: "rgb(200,149,237)" },
+                            { y: 25, label: "DC", color: "rgb(100,50,237)" },
+                            { y: 22, label: "AZ", color: "rgb(50,149,200)" },
+                            { y: 24, label: "NY", color: "rgb(170,267,37)" },
+                            { y: 18, label: "MD", color: "rgb(250,149,137)" },
+                            { y: 15, label: "NM", color: "rgb(100,98,37)" },
+                        ]
+                    },
+                ]
+            });
+        chart.render();
+        var chart = new CanvasJS.Chart("parkchart2",
+            {
+                animationEnabled: true,
+                title: {
+                    text: "Number of Parks By State",
+                },
+                axisY: {
+                    title: "Number of parks"
+
+                },
+                axisX: {
+                    title: "States"
+                },
+
+                data: [
+                    {
+                        type: "column",
+                        showInLegend: false,
+                        dataPoints: [
+                            { y: 11, label: "FL", color: "rgb(135,206,120)" },
+                            { y: 28, label: "CA", color: "rgb(0,191,255)" },
+                            { y: 14, label: "TX", color: "rgb(200,149,237)" },
+                            { y: 25, label: "DC", color: "rgb(100,50,237)" },
+                            { y: 22, label: "AZ", color: "rgb(50,149,200)" },
+                            { y: 24, label: "NY", color: "rgb(170,267,37)" },
+                            { y: 18, label: "MD", color: "rgb(250,149,137)" },
+                            { y: 15, label: "NM", color: "rgb(100,98,37)" },
+                        ]
+                    },
+                ]
+            });
+        chart.render();
+
+        var chart = new CanvasJS.Chart("parkchart3",
+            {
+                animationEnabled: true,
+                title: {
+                    text: "Number of Parks By State",
+                },
+                axisY: {
+                    title: "Number of parks"
+                },
+                axisX: {
+                    title: "States"
+                },
+                data: [
+                    {
+                        type: "doughnut",
+
+    ViewData["Title"] = "About us";
+}
+
+<div class="container">
+    <h2 class="jumbotron-heading" align="center">@ViewData["Title"]</h2>
+    @*<a align="center" class="btn btn-primary my-2" href="https://github.com/Fantastic-Five-for-CSharp/Group-Assignment-4" target="_blank">GitHub</a>*@
+
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <img src="../img/p1.jpg" class="profile-img" width="130" height="140">
+                <h2>Qian Wang</h2>
+                <p>
+                    Qian Wang is a Business Analytics and Information Systems graduate student at University of South Florida. She is a highly effective data analyst with excellent problem-solving skills. She is also a good team player, and is able to lead projects as well as participate actively as a team member. In this assignment, she is responible for data model, update index and about us page and refinement.
+                    <a href="https://github.com/Fantastic-Five-for-CSharp/Group-Assignment-4" style="color:#2593D3">Git_page</a>
+                </p>
+            </th>
+            <th>
+                <img src="../img/p2.jpg" class="profile-img" width="130" height="140">
+                <h2>You Zhou</h2>
+                <p>
+                    You Zhou is currently pursuing the BAIS degree in the USF Muma college of Business.He has a background of Business Adminstration and relatied experience in Project Management Process Enhencement.
+                    He worked on api, data display, crud function, and deploy of the project.
+                    <a href="https://github.com/Fantastic-Five-for-CSharp/Group-Assignment-4" style="color:#2593D3">Git_page</a>
+                </p>
+            </th>
+            <th>
+                <img src="../img/p3.jpg" class="profile-img" width="130" height="140">
+                <h2>Shitao Liao</h2>
+                <p>
+                    Shitao Liao is now persuing his master's degree in business analytics and information systems at University of South Florida. His interest areas are database design and data analysis. He is responsible for the design of detail pages.
+                    <a href="https://github.com/Fantastic-Five-for-CSharp/Group-Assignment-4" style="color:#2593D3">Git_page</a>
+                </p>
+            </th>
+        </tr>
+    </thead>
+</table>
+<hr />
+<hr />
+
+<div class="row">
+
+    <h2 align="center">Data Chart</h2>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <div id="parkchart1" style="width: 31%; height: 160px;display: inline-block"></div>
+    <div id="parkchart2" style="width: 31%; height: 160px;display: inline-block"></div>
+    <div id="parkchart3" style="width: 31%; height: 160px;display: inline-block"></div>
+    <script>
+
+
+        var chart = new CanvasJS.Chart("parkchart1",
+{
+            animationEnabled: true,
+title: {
+            text: "Number of Parks By State",
+    },
+axisY: {
+            title: "Number of parks"
+    },
+    data: [
+{
+            type: "pie",
+        showInLegend: false,
+
+    toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+        dataPoints: [
+        {y: 11, label: "FL", color: "rgb(135,206,120)" },
+        {y: 28, label: "CA", color: "rgb(0,191,255)" },
+        {y: 14, label: "TX", color: "rgb(200,149,237)" },
+        {y: 25, label: "DC", color: "rgb(100,50,237)" },
+        {y: 22, label: "AZ", color: "rgb(50,149,200)" },
+        {y: 24, label: "NY", color: "rgb(170,267,37)" },
+        {y: 18, label: "MD", color: "rgb(250,149,137)" },
+        {y: 15, label: "NM", color: "rgb(100,98,37)" },
+    ]
+},
+]
+});
+chart.render();
+var chart = new CanvasJS.Chart("parkchart2",
+{
+            animationEnabled: true,
+title: {
+            text: "Number of Parks By State",
+    },
+axisY: {
+            title: "Number of parks"
+
+    },
+axisX: {
+            title: "States"
+    },
+
+    data: [
+{
+            type: "column",
+        showInLegend: false,
+        dataPoints: [
+        {y: 11, label: "FL", color: "rgb(135,206,120)" },
+        {y: 28, label: "CA", color: "rgb(0,191,255)" },
+        {y: 14, label: "TX", color: "rgb(200,149,237)" },
+        {y: 25, label: "DC", color: "rgb(100,50,237)" },
+        {y: 22, label: "AZ", color: "rgb(50,149,200)" },
+        {y: 24, label: "NY", color: "rgb(170,267,37)" },
+        {y: 18, label: "MD", color: "rgb(250,149,137)" },
+        {y: 15, label: "NM", color: "rgb(100,98,37)" },
+    ]
+},
+]
+});
+chart.render();
+
+var chart = new CanvasJS.Chart("parkchart3",
+{
+            animationEnabled: true,
+title: {
+            text: "Number of Parks By State",
+    },
+axisY: {
+            title: "Number of parks"
+    },
+axisX: {
+            title: "States"
+    },
+    data: [
+{
+            type: "doughnut",
+
+    ViewData["Title"] = "About us";
+}
+
+<div class="container">
+    <h2 class="jumbotron-heading" align="center">@ViewData["Title"]</h2>
+    @*<a align="center" class="btn btn-primary my-2" href="https://github.com/Fantastic-Five-for-CSharp/Group-Assignment-4" target="_blank">GitHub</a>*@
+
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <img src="../img/p1.jpg" class="profile-img" width="130" height="140">
+                <h2>Qian Wang</h2>
+                <p>
+                    Qian Wang is a Business Analytics and Information Systems graduate student at University of South Florida. She is a highly effective data analyst with excellent problem-solving skills. She is also a good team player, and is able to lead projects as well as participate actively as a team member. In this assignment, she is responible for data model, update index and about us page and refinement.
+                    <a href="https://github.com/Fantastic-Five-for-CSharp/Group-Assignment-4" style="color:#2593D3">Git_page</a>
+                </p>
+            </th>
+            <th>
+                <img src="../img/p2.jpg" class="profile-img" width="130" height="140">
+                <h2>You Zhou</h2>
+                <p>
+                    You Zhou is currently pursuing the BAIS degree in the USF Muma college of Business.He has a background of Business Adminstration and relatied experience in Project Management Process Enhencement.
+                    He worked on api, data display, crud function, and deploy of the project.
+                    <a href="https://github.com/Fantastic-Five-for-CSharp/Group-Assignment-4" style="color:#2593D3">Git_page</a>
+                </p>
+            </th>
+            <th>
+                <img src="../img/p3.jpg" class="profile-img" width="130" height="140">
+                <h2>Shitao Liao</h2>
+                <p>
+                    Shitao Liao is now persuing his master's degree in business analytics and information systems at University of South Florida. His interest areas are database design and data analysis. He is responsible for the design of detail pages.
+                    <a href="https://github.com/Fantastic-Five-for-CSharp/Group-Assignment-4" style="color:#2593D3">Git_page</a>
+                </p>
+            </th>
+        </tr>
+    </thead>
+</table>
+<hr />
+<hr />
+
+<div class="row">
+
+    <h2 align="center">Data Chart</h2>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <div id="parkchart1" style="width: 31%; height: 160px;display: inline-block"></div>
+    <div id="parkchart2" style="width: 31%; height: 160px;display: inline-block"></div>
+    <div id="parkchart3" style="width: 31%; height: 160px;display: inline-block"></div>
+    <script>
+
+
+        var chart = new CanvasJS.Chart("parkchart1",
+{
+            animationEnabled: true,
+title: {
+            text: "Number of Parks By State",
+    },
+axisY: {
+            title: "Number of parks"
+    },
+    data: [
+{
+            type: "pie",
+        showInLegend: false,
+
+toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+        dataPoints: [
+{y: 11, label: "FL", color: "rgb(135,206,120)" },
+{y: 28, label: "CA", color: "rgb(0,191,255)" },
+{y: 14, label: "TX", color: "rgb(200,149,237)" },
+{y: 25, label: "DC", color: "rgb(100,50,237)" },
+{y: 22, label: "AZ", color: "rgb(50,149,200)" },
+{y: 24, label: "NY", color: "rgb(170,267,37)" },
+{y: 18, label: "MD", color: "rgb(250,149,137)" },
+{y: 15, label: "NM", color: "rgb(100,98,37)" },
+    ]
+},
+]
+});
+chart.render();
+var chart = new CanvasJS.Chart("parkchart2",
+{
+            animationEnabled: true,
+title: {
+            text: "Number of Parks By State",
+    },
+axisY: {
+            title: "Number of parks"
+
+    },
+axisX: {
+            title: "States"
+    },
+
+    data: [
+{
+            type: "column",
+        showInLegend: false,
+        dataPoints: [
+{y: 11, label: "FL", color: "rgb(135,206,120)" },
+{y: 28, label: "CA", color: "rgb(0,191,255)" },
+{y: 14, label: "TX", color: "rgb(200,149,237)" },
+{y: 25, label: "DC", color: "rgb(100,50,237)" },
+{y: 22, label: "AZ", color: "rgb(50,149,200)" },
+{y: 24, label: "NY", color: "rgb(170,267,37)" },
+{y: 18, label: "MD", color: "rgb(250,149,137)" },
+{y: 15, label: "NM", color: "rgb(100,98,37)" },
+    ]
+},
+]
+});
+chart.render();
+
+var chart = new CanvasJS.Chart("parkchart3",
+{
+            animationEnabled: true,
+title: {
+            text: "Number of Parks By State",
+    },
+axisY: {
+            title: "Number of parks"
+    },
+axisX: {
+            title: "States"
+    },
+    data: [
+{
+            type: "doughnut",
+
+    ViewData["Title"] = "About us";
+}
+
+<div class="container">
+    <h2 class="jumbotron-heading" align="center">@ViewData["Title"]</h2>
+    @*<a align="center" class="btn btn-primary my-2" href="https://github.com/Fantastic-Five-for-CSharp/Group-Assignment-4" target="_blank">GitHub</a>*@
+
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <img src="../img/p1.jpg" class="profile-img" width="130" height="140">
+                <h2>Qian Wang</h2>
+                <p>
+                    Qian Wang is a Business Analytics and Information Systems graduate student at University of South Florida. She is a highly effective data analyst with excellent problem-solving skills. She is also a good team player, and is able to lead projects as well as participate actively as a team member. In this assignment, she is responible for data model, update index and about us page and refinement.
+                    <a href="https://github.com/Fantastic-Five-for-CSharp/Group-Assignment-4" style="color:#2593D3">Git_page</a>
+                </p>
+            </th>
+            <th>
+                <img src="../img/p2.jpg" class="profile-img" width="130" height="140">
+                <h2>You Zhou</h2>
+                <p>
+                    You Zhou is currently pursuing the BAIS degree in the USF Muma college of Business.He has a background of Business Adminstration and relatied experience in Project Management Process Enhencement.
+                    He worked on api, data display, crud function, and deploy of the project.
+                    <a href="https://github.com/Fantastic-Five-for-CSharp/Group-Assignment-4" style="color:#2593D3">Git_page</a>
+                </p>
+            </th>
+            <th>
+                <img src="../img/p3.jpg" class="profile-img" width="130" height="140">
+                <h2>Shitao Liao</h2>
+                <p>
+                    Shitao Liao is now persuing his master's degree in business analytics and information systems at University of South Florida. His interest areas are database design and data analysis. He is responsible for the design of detail pages.
+                    <a href="https://github.com/Fantastic-Five-for-CSharp/Group-Assignment-4" style="color:#2593D3">Git_page</a>
+                </p>
+            </th>
+        </tr>
+    </thead>
+</table>
+<hr />
+<hr />
+
+<div class="row">
+
+    <h2 align="center">Data Chart</h2>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <div id="parkchart1" style="width: 31%; height: 160px;display: inline-block"></div>
+    <div id="parkchart2" style="width: 31%; height: 160px;display: inline-block"></div>
+    <div id="parkchart3" style="width: 31%; height: 160px;display: inline-block"></div>
+    <script>
+
+
+        var chart = new CanvasJS.Chart("parkchart1",
+{
+            animationEnabled: true,
+title: {
+            text: "Number of Parks By State",
+    },
+axisY: {
+            title: "Number of parks"
+    },
+    data: [
+{
+            type: "pie",
+        showInLegend: false,
+
+toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+        dataPoints: [
+{y: 11, label: "FL", color: "rgb(135,206,120)" },
+{y: 28, label: "CA", color: "rgb(0,191,255)" },
+{y: 14, label: "TX", color: "rgb(200,149,237)" },
+{y: 25, label: "DC", color: "rgb(100,50,237)" },
+{y: 22, label: "AZ", color: "rgb(50,149,200)" },
+{y: 24, label: "NY", color: "rgb(170,267,37)" },
+{y: 18, label: "MD", color: "rgb(250,149,137)" },
+{y: 15, label: "NM", color: "rgb(100,98,37)" },
+    ]
+},
+]
+});
+chart.render();
+var chart = new CanvasJS.Chart("parkchart2",
+{
+            animationEnabled: true,
+title: {
+            text: "Number of Parks By State",
+    },
+axisY: {
+            title: "Number of parks"
+
+    },
+axisX: {
+            title: "States"
+    },
+
+    data: [
+{
+            type: "column",
+        showInLegend: false,
+        dataPoints: [
+{y: 11, label: "FL", color: "rgb(135,206,120)" },
+{y: 28, label: "CA", color: "rgb(0,191,255)" },
+{y: 14, label: "TX", color: "rgb(200,149,237)" },
+{y: 25, label: "DC", color: "rgb(100,50,237)" },
+{y: 22, label: "AZ", color: "rgb(50,149,200)" },
+{y: 24, label: "NY", color: "rgb(170,267,37)" },
+{y: 18, label: "MD", color: "rgb(250,149,137)" },
+{y: 15, label: "NM", color: "rgb(100,98,37)" },
+    ]
+},
+]
+});
+chart.render();
+
+var chart = new CanvasJS.Chart("parkchart3",
+{
+            animationEnabled: true,
+title: {
+            text: "Number of Parks By State",
+    },
+axisY: {
+            title: "Number of parks"
+    },
+axisX: {
+            title: "States"
+    },
+    data: [
+{
+            type: "doughnut",
+
+    ViewData["Title"] = "About us";
+}
+
+<div class="container">
+    <h2 class="jumbotron-heading" align="center">@ViewData["Title"]</h2>
+    @*<a align="center" class="btn btn-primary my-2" href="https://github.com/Fantastic-Five-for-CSharp/Group-Assignment-4" target="_blank">GitHub</a>*@
+
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <img src="../img/p1.jpg" class="profile-img" width="130" height="140">
+                <h2>Qian Wang</h2>
+                <p>
+                    Qian Wang is a Business Analytics and Information Systems graduate student at University of South Florida. She is a highly effective data analyst with excellent problem-solving skills. She is also a good team player, and is able to lead projects as well as participate actively as a team member. In this assignment, she is responible for data model, update index and about us page and refinement.
+                    <a href="https://github.com/Fantastic-Five-for-CSharp/Group-Assignment-4" style="color:#2593D3">Git_page</a>
+                </p>
+            </th>
+            <th>
+                <img src="../img/p2.jpg" class="profile-img" width="130" height="140">
+                <h2>You Zhou</h2>
+                <p>
+                    You Zhou is currently pursuing the BAIS degree in the USF Muma college of Business.He has a background of Business Adminstration and relatied experience in Project Management Process Enhencement.
+                    He worked on api, data display, crud function, and deploy of the project.
+                    <a href="https://github.com/Fantastic-Five-for-CSharp/Group-Assignment-4" style="color:#2593D3">Git_page</a>
+                </p>
+            </th>
+            <th>
+                <img src="../img/p3.jpg" class="profile-img" width="130" height="140">
+                <h2>Shitao Liao</h2>
+                <p>
+                    Shitao Liao is now persuing his master's degree in business analytics and information systems at University of South Florida. His interest areas are database design and data analysis. He is responsible for the design of detail pages.
+                    <a href="https://github.com/Fantastic-Five-for-CSharp/Group-Assignment-4" style="color:#2593D3">Git_page</a>
+                </p>
+            </th>
+        </tr>
+    </thead>
+</table>
+<hr />
+<hr />
+
+<div class="row">
+
+    <h2 align="center">Data Chart</h2>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <div id="parkchart1" style="width: 31%; height: 160px;display: inline-block"></div>
+    <div id="parkchart2" style="width: 31%; height: 160px;display: inline-block"></div>
+    <div id="parkchart3" style="width: 31%; height: 160px;display: inline-block"></div>
+    <script>
+
+
+        var chart = new CanvasJS.Chart("parkchart1",
+{
+            animationEnabled: true,
+title: {
+            text: "Number of Parks By State",
+    },
+axisY: {
+            title: "Number of parks"
+    },
+    data: [
+{
+            type: "pie",
+        showInLegend: false,
+
+toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+        dataPoints: [
+{y: 11, label: "FL", color: "rgb(135,206,120)" },
+{y: 28, label: "CA", color: "rgb(0,191,255)" },
+{y: 14, label: "TX", color: "rgb(200,149,237)" },
+{y: 25, label: "DC", color: "rgb(100,50,237)" },
+{y: 22, label: "AZ", color: "rgb(50,149,200)" },
+{y: 24, label: "NY", color: "rgb(170,267,37)" },
+{y: 18, label: "MD", color: "rgb(250,149,137)" },
+{y: 15, label: "NM", color: "rgb(100,98,37)" },
+    ]
+},
+]
+});
+chart.render();
+var chart = new CanvasJS.Chart("parkchart2",
+{
+            animationEnabled: true,
+title: {
+            text: "Number of Parks By State",
+    },
+axisY: {
+            title: "Number of parks"
+
+    },
+axisX: {
+            title: "States"
+    },
+
+    data: [
+{
+            type: "column",
+        showInLegend: false,
+        dataPoints: [
+{y: 11, label: "FL", color: "rgb(135,206,120)" },
+{y: 28, label: "CA", color: "rgb(0,191,255)" },
+{y: 14, label: "TX", color: "rgb(200,149,237)" },
+{y: 25, label: "DC", color: "rgb(100,50,237)" },
+{y: 22, label: "AZ", color: "rgb(50,149,200)" },
+{y: 24, label: "NY", color: "rgb(170,267,37)" },
+{y: 18, label: "MD", color: "rgb(250,149,137)" },
+{y: 15, label: "NM", color: "rgb(100,98,37)" },
+    ]
+},
+]
+});
+chart.render();
+
+var chart = new CanvasJS.Chart("parkchart3",
+{
+            animationEnabled: true,
+title: {
+            text: "Number of Parks By State",
+    },
+axisY: {
+            title: "Number of parks"
+    },
+axisX: {
+            title: "States"
+    },
+    data: [
+{
+            type: "doughnut",
+
+    ViewData["Title"] = "About us";
+}
+
+<div class="container">
+    <h2 class="jumbotron-heading" align="center">@ViewData["Title"]</h2>
+    @*<a align="center" class="btn btn-primary my-2" href="https://github.com/Fantastic-Five-for-CSharp/Group-Assignment-4" target="_blank">GitHub</a>*@
+
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <img src="../img/p1.jpg" class="profile-img" width="130" height="140">
+                <h2>Qian Wang</h2>
+                <p>
+                    Qian Wang is a Business Analytics and Information Systems graduate student at University of South Florida. She is a highly effective data analyst with excellent problem-solving skills. She is also a good team player, and is able to lead projects as well as participate actively as a team member. In this assignment, she is responible for data model, update index and about us page and refinement.
+                    <a href="https://github.com/Fantastic-Five-for-CSharp/Group-Assignment-4" style="color:#2593D3">Git_page</a>
+                </p>
+            </th>
+            <th>
+                <img src="../img/p2.jpg" class="profile-img" width="130" height="140">
+                <h2>You Zhou</h2>
+                <p>
+                    You Zhou is currently pursuing the BAIS degree in the USF Muma college of Business.He has a background of Business Adminstration and relatied experience in Project Management Process Enhencement.
+                    He worked on api, data display, crud function, and deploy of the project.
+                    <a href="https://github.com/Fantastic-Five-for-CSharp/Group-Assignment-4" style="color:#2593D3">Git_page</a>
+                </p>
+            </th>
+            <th>
+                <img src="../img/p3.jpg" class="profile-img" width="130" height="140">
+                <h2>Shitao Liao</h2>
+                <p>
+                    Shitao Liao is now persuing his master's degree in business analytics and information systems at University of South Florida. His interest areas are database design and data analysis. He is responsible for the design of detail pages.
+                    <a href="https://github.com/Fantastic-Five-for-CSharp/Group-Assignment-4" style="color:#2593D3">Git_page</a>
+                </p>
+            </th>
+        </tr>
+    </thead>
+</table>
+<hr />
+<hr />
+
+<div class="row">
+
+    <h2 align="center">Data Chart</h2>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <div id="parkchart1" style="width: 31%; height: 160px;display: inline-block"></div>
+    <div id="parkchart2" style="width: 31%; height: 160px;display: inline-block"></div>
+    <div id="parkchart3" style="width: 31%; height: 160px;display: inline-block"></div>
+    <script>
+
+
+        var chart = new CanvasJS.Chart("parkchart1",
+{
+            animationEnabled: true,
+title: {
+            text: "Number of Parks By State",
+    },
+axisY: {
+            title: "Number of parks"
+    },
+    data: [
+{
+            type: "pie",
+        showInLegend: false,
+
+toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+        dataPoints: [
+{y: 11, label: "FL", color: "rgb(135,206,120)" },
+{y: 28, label: "CA", color: "rgb(0,191,255)" },
+{y: 14, label: "TX", color: "rgb(200,149,237)" },
+{y: 25, label: "DC", color: "rgb(100,50,237)" },
+{y: 22, label: "AZ", color: "rgb(50,149,200)" },
+{y: 24, label: "NY", color: "rgb(170,267,37)" },
+{y: 18, label: "MD", color: "rgb(250,149,137)" },
+{y: 15, label: "NM", color: "rgb(100,98,37)" },
+    ]
+},
+]
+});
+chart.render();
+var chart = new CanvasJS.Chart("parkchart2",
+{
+            animationEnabled: true,
+title: {
+            text: "Number of Parks By State",
+    },
+axisY: {
+            title: "Number of parks"
+
+    },
+axisX: {
+            title: "States"
+    },
+
+    data: [
+{
+            type: "column",
+        showInLegend: false,
+        dataPoints: [
+{y: 11, label: "FL", color: "rgb(135,206,120)" },
+{y: 28, label: "CA", color: "rgb(0,191,255)" },
+{y: 14, label: "TX", color: "rgb(200,149,237)" },
+{y: 25, label: "DC", color: "rgb(100,50,237)" },
+{y: 22, label: "AZ", color: "rgb(50,149,200)" },
+{y: 24, label: "NY", color: "rgb(170,267,37)" },
+{y: 18, label: "MD", color: "rgb(250,149,137)" },
+{y: 15, label: "NM", color: "rgb(100,98,37)" },
+    ]
+},
+]
+});
+chart.render();
+
+var chart = new CanvasJS.Chart("parkchart3",
+{
+            animationEnabled: true,
+title: {
+            text: "Number of Parks By State",
+    },
+axisY: {
+            title: "Number of parks"
+    },
+axisX: {
+            title: "States"
+    },
+    data: [
+{
+            type: "doughnut",
