@@ -18,10 +18,10 @@
     <style>
         footer {
             display: block;
-            background-color: #00392a;
+            background-color: 2B66B6;
             text-align: center;
             color: #c2b163;
-            position: sticky;
+            position: fixed;
             bottom: 0px;
         }
     </style>
@@ -33,20 +33,20 @@
         <ul class="navbar-nav mr-auto font-weight-bold">
 
             <li class="nav-item">
-                <a asp-controller="Home" asp-action="Index" class="btn btn-primary my-2">Home</a>
+                <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Home</a>
             </li>
 
             <li class="nav-item">
-                <a asp-controller="Home" asp-action="Parks" class="btn btn-primary my-2">Park Information</a>
+                <a asp-controller="Home" asp-action="Parks" class="btn btn-primary">Park</a>
             </li>
             <li class="nav-item">
-                <a asp-controller="Home" asp-action="Tours" class="btn btn-primary my-2">Explore Tours Information</a>
+                <a asp-controller="Home" asp-action="Tours" class="btn btn-primary">Tours Info</a>
             </li>
             <li class="nav-item">
-                <a asp-controller="Home" asp-action="Camps" class="btn btn-primary my-2">Explore Camps Information</a>
+                <a asp-controller="Home" asp-action="Camps" class="btn btn-primary">Camps Info</a>
             </li>
             <li class="nav-item">
-                <a asp-controller="Home" asp-action="AboutUs" class="btn btn-primary my-2">About Us</a>
+                <a asp-controller="Home" asp-action="AboutUs" class="btn btn-primary">About Us</a>
             </li>
         </ul>
     </nav>
@@ -59,7 +59,6 @@
     <footer>
         <a href="https://www.nps.gov/subjects/developer/index.htm" target="_blank">Source Data</a> | <a href="https://github.com/" target="_blank">Github</a> | <a href="https://github.com/Fantastic-Five-for-CSharp/Group-Assignment-4">Contact Us</a> | <a asp-controller="Privacy" asp-action="Index">Privacy</a>
         <br />
-     
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
