@@ -25,6 +25,7 @@ namespace Group_Assignment_4.Models
         public string? durationMax { get; set; }
         public string? durationUnit { get; set; }
         public string  parkCode { get; set; }
+        public string  name { get; set; }
        
     }
 }
