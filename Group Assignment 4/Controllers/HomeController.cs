@@ -30,7 +30,7 @@ namespace Federal_Election.Controllers
             httpClient.DefaultRequestHeaders.Accept.Add(
                 new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 
-            string NATIONAL_PARK_API_PATH = BASE_URL + "/parks?limit=5";
+            string NATIONAL_PARK_API_PATH = BASE_URL + "/parks?limit=6";
             string parksData = "";
 
             Parks parks = null;
@@ -149,6 +149,26 @@ namespace Federal_Election.Controllers
             return View();
         }
         public IActionResult Details()
+        {
+            return View();
+        }
+        public IActionResult TX()
+        {
+            return View();
+        }
+        public IActionResult NY()
+        {
+            return View();
+        }
+        public IActionResult OH()
+        {
+            return View();
+        }
+        public IActionResult DC()
+        {
+            return View();
+        }
+        public IActionResult VA()
         {
             return View();
         }

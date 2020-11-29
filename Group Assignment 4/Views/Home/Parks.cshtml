@@ -13,68 +13,114 @@
 </style>
 <h2 align="center"> Park Information </h2>
 <hr />
-<head lang="en">
-    <meta charset="UTF-8">
-    <script src="js/jquery-3.0.0.min.js"></script>
-    <script src="js/jquery.params.js"></script>
-    <script>
-        $(function(){
-             Park = $("#Park").text();
-            
-
-            $("#btn").on("click",function(){
-               jump1();
-            });
-        });
-
-        function jump1(){
-            url = "Details.cshtml?Park="+Park
-            window.location.href = url;
-        }
-    </script>
-</head>
-<div class="row justify-content-center pt-3 pb-1">
-    <div class="col text-center">
-        <a asp-controller="Create" asp-action="Index">Create New Record</a>
-        <a> Or Click Any Park name to see details Information </a>
-    </div>
-
-</div>
-
 <table class="table table-responsive-sm table-striped text-center pb-2 mb-2 resp">
     <thead>
         <tr>
             <th>
-                Park
-            </th>
-            <th>
                 State
             </th>
             <th>
-                Description
+                Park Name
+            </th>
+            <th>
+                Park Code
+            </th>
+            
+            <th>
+                Park Descritpion
             </th>
         </tr>
     </thead>
 
     <tbody>
-
-        @foreach (var item in Model.data)
-        {
         <tr>
             <td>
                 <li class="nav-item">
-                    <a asp-controller="Home" asp-action="Details" class="btn btn-primary my-2">@Html.DisplayFor(modelItem => item.name)</a>
+                    <a asp-controller="Home" asp-action="TX" class="btn btn-primary my-2">TX</a>
                 </li>
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.states)
+                Fort Davis
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.description)
+                foda
             </td>
 
+            <td>
+                Fort Davis is one of the best surviving examples of an Indian Wars' frontier military post in the Southwest. From 1854 to 1891, Fort Davis was strategically located to protect emigrants, mail coaches, and freight wagons on the Trans-Pecos portion of the San Antonio-El Paso Road and on the Chihuahua Trail.
+            </td>
 
         </tr>
-        }
+        <tr>
+            <td>
+                <li class="nav-item">
+                    <a asp-controller="Home" asp-action="NY" class="btn btn-primary my-2">NY</a>
+                </li>
+            </td>
+            <td>
+                Fort Stanwix
+            </td>
+            <td>
+                fost
+            </td>
+            <td>
+                For centuries, the Oneida Carrying Place, a six mile portage connecting the Mohawk River and Wood Creek, served as a vital link for those traveling by water from the ocean to the Great Lakes. When Europeans arrived, nations fought for control of the carry, the homelands of the Six Nations Confederacy, and the rich resources of North America. In this struggle, Fort Stanwix would play a vital role.
+            </td>
+
+        </tr>
+
+        <tr>
+            <td>
+                <li class="nav-item">
+                    <a asp-controller="Home" asp-action="OH" class="btn btn-primary my-2">OH</a>
+                </li>
+            </td>
+            <td>
+                National Aviation
+            </td>
+            <td>
+                avia
+            </td>
+            <td>
+                Aviation is chock-full of tradition & history and nowhere will you find a richer collection of aviation than here, the birthplace of aviation. From the straightforward bicycle shops that fostered the Wright brothers' flying ambitions to the complex spacecraft that carried man to the moon, the National Aviation Heritage Area has everything you need to learn about this country’s aviation legacy.
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <li class="nav-item">
+                    <a asp-controller="Home" asp-action="DC" class="btn btn-primary my-2">DC</a>
+                </li>
+            </td>
+            <td>
+                National Capital Parks-East
+            </td>
+            <td>
+                nace
+            </td>
+            <td>
+                Welcome to National Capital Parks-East. We invite you to journey to parks Beyond the Capital of Washington, D.C. National Capital Parks-East is 13 park sites, parkways and statuary covering more than 8,000 acres of historic, cultural, and recreational parklands from Capitol Hill to the nearby Maryland suburbs
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                <li class="nav-item">
+                    <a asp-controller="Home" asp-action="VA" class="btn btn-primary my-2">VA</a>
+                </li>
+            </td>
+            <td>
+                Yorktown Battlefield
+            </td>
+            <td>
+                york
+            </td>
+            <td>
+                Discover what it took for the United States to be independent as you explore the site of the last major battle of the Revolutionary War. Here at Yorktown, in the fall of 1781, General George Washington, with allied American and French forces, besieged General Charles Lord Cornwallis’s British army. On October 19, Cornwallis surrendered, effectively ending the war and ensuring independence
+            </td>
+        </tr>
+        
+
     </tbody>
 </table>

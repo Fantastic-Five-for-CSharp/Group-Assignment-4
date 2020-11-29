@@ -17,14 +17,15 @@
     <thead>
         <tr>
             <th>
+                State
+            </th>
+            <th>
                 Park Name
             </th>
             <th>
-                Park ID
+                Park Code
             </th>
-            <th>
-                State
-            </th>
+            
             <th>
                 Park Descritpion
             </th>
@@ -37,15 +38,20 @@
         {
         <tr>
             <td>
+                <li class="nav-item">
+                    <a asp-controller="Home" asp-action="Details" class="btn btn-primary my-2">@Html.DisplayFor(modelItem => item.states)</a>
+                </li>
+            </td>
+            <td>
+                
                 @Html.DisplayFor(modelItem => item.name)
+                
             </td>
 
             <td>
-                @Html.DisplayFor(modelItem => item.id)
+                @Html.DisplayFor(modelItem => item.parkCode)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.states)
-            </td>
+
             <td>
                 @Html.DisplayFor(modelItem => item.description)
             </td>
