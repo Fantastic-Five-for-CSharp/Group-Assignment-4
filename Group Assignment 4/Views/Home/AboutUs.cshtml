@@ -43,7 +43,7 @@
 <hr />
 
 <div class="chart">
-    <h2 align="center">Chart</h2>
+    <h2 align="center">Team Contribution</h2>
 </div>
 
 <div class="row">
@@ -62,7 +62,7 @@
                 data: [
                     {
                         type: "pie",
-                        showInLegend: true,
+                        showInLegend: false,
                         indexLabel: "{label} - #percent%",
                         toolTipContent: "<b>{label}:</b> {y} (#percent%)",
                         dataPoints: [
@@ -84,7 +84,7 @@
                 data: [
                     {
                         type: "pie",
-                        showInLegend: true,
+                        showInLegend: false,
                         indexLabel: "{label} - #percent%",
                         toolTipContent: "<b>{label}:</b> {y} (#percent%)",
                         dataPoints: [
@@ -109,7 +109,7 @@
                 data: [
                     {
                         type: "pie",
-                        showInLegend: true,
+                        showInLegend: false,
                         indexLabel: "{label} - #percent%",
                         toolTipContent: "<b>{label}:</b> {y} (#percent%)",
                         dataPoints: [
@@ -126,7 +126,7 @@
 <hr />
 <hr />
 
-<div id="parkchart" style="width: 50%; height: 350px;display: inline-block; text-align: center;"></div>
+<div id="parkchart" style="width: 50%; height: 350px;display: inline-block; "></div>
 <script>
 
     var chart = new CanvasJS.Chart("parkchart",
@@ -177,7 +177,7 @@
 <div class="container bg-white">
 
     <h2 align="center">Data Model</h2>
-    <img class="img-custom" src="../img/ERD.png" alt="DataModel" width="800" height="600" align="middle">
+    <img class="img-custom" src="../img/ERD.png" alt="DataModel" width="800" height="600" style="margin: auto">
 
 </div>
 
