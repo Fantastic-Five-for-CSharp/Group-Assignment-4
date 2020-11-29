@@ -4,7 +4,6 @@
     table, th, td {
         border: 1px solid black;
     }
-
     table {
         max-width: 2200px;
         margin-left: auto;
@@ -22,14 +21,14 @@
             <th>
                 Camp ID
             </th>`
-
+            
             <th>
                 Description
             </th>
             <th>
                 Reservation Info
             </th>
-
+          
         </tr>
     </thead>
 
@@ -37,37 +36,6 @@
 
         @foreach (var item in Model.data)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.id)
-                </td>
-
-                <td>
-                    @Html.DisplayFor(modelItem => item.description)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.reservationInfo)
-                </td>
-
-
-
-            </tr>
-        }
-        <tr>
-            <td>
-                <a id="dbopt" asp-controller="Home" asp-action="PopulateSymbols"><img src="~/images/button_save-data.png" /></a>
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-<tbody>
-
-    @foreach (var item in Model.data)
-    {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.name)
@@ -86,10 +54,13 @@
 
 
         </tr>
-    }
-    <tr>
-        <td>
-            <a id="dbopt" asp-controller="Home" asp-action="PopulateSymbols"><img src="~/images/button_save-data.png" /></a>
-        </td>
-    </tr>
-</tbody>
+        }
+        <tr>
+            <td>
+                <a id="dbopt" asp-controller="Home" asp-action="PopulateSymbols"><img src="~/images/button_save-data.png" /></a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
