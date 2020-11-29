@@ -4,6 +4,7 @@
     table, th, td {
         border: 1px solid black;
     }
+
     table {
         max-width: 2200px;
         margin-left: auto;
@@ -21,14 +22,14 @@
             <th>
                 Camp ID
             </th>`
-            
+
             <th>
                 Description
             </th>
             <th>
                 Reservation Info
             </th>
-          
+
         </tr>
     </thead>
 
@@ -36,31 +37,39 @@
 
         @foreach (var item in Model.data)
         {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.id)
-            </td>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
 
-            <td>
-                @Html.DisplayFor(modelItem => item.description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.reservationInfo)
-            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.reservationInfo)
+                </td>
 
 
 
-        </tr>
+            </tr>
         }
-        <tr>
-            <td>
-                <a id="dbopt" asp-controller="Home" asp-action="PopulateSymbols"><img src="~/images/button_save-data.png" /></a>
-            </td>
-        </tr>
+
+
+
     </tbody>
 </table>
+<div align="center">
+    <a id="dbopt" asp-controller="Home" asp-action="Camps" align="center" onclick="clickAlert()" value="Click-2-Alert"><img src="~/img/images.jpg" /></a>
+</div>
+<script>
+    alertDbSave(@ViewBag.dbSuccessComp);
+</script>
 
-
+<script>
+    function clickAlert() {
+        alert("Data Saved !");
+    }
+</script>

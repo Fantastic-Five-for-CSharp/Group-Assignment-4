@@ -42,3 +42,17 @@
         <td>Life of all types abounds in the Big Thicket. This national preserve protects the incredible diversity of life found where multiple habitats converge in southeast Texas. Hiking trails and waterways meander through nine different ecosystems, from longleaf pine forests to cypress-lined bayous. It is a place of discovery, a place to wander and explore, a place to marvel at the richness of nature.</td>
     </tr>
 </table>
+
+<div align="center">
+    <a id="dbopt" asp-controller="Home" asp-action="TX" onclick="clickAlert()" value="Click-2-Alert"><img src="~/img/images.jpg" /></a>
+</div>
+
+<script>
+    alertDbSave(@ViewBag.dbSuccessComp);
+</script>
+
+<script>
+    function clickAlert() {
+        alert("Data Saved!");
+    }
+</script>

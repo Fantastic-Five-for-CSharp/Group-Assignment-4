@@ -43,5 +43,19 @@
         <td>Want to live on the edge? Visit a place recreated each day by ocean wind and waves. Life on Assateague Island has adapted to an existence on the move. Explore sandy beaches, salt marshes, maritime forests and coastal bays. Rest, relax, recreate and enjoy some time on the edge of the continent.</td>
     </tr>
 
-    
+
 </table>
+
+<div align="center">
+    <a id="dbopt" asp-controller="Home" asp-action="VA" onclick="clickAlert()" value="Click-2-Alert"><img src="~/img/images.jpg" /></a>
+</div>
+
+<script>
+    alertDbSave(@ViewBag.dbSuccessComp);
+</script>
+
+<script>
+    function clickAlert() {
+        alert("Data Saved!");
+    }
+</script>

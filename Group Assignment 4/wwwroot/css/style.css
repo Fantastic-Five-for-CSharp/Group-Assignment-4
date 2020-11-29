@@ -8,7 +8,11 @@
 body{
   font-family: 'Open Sans', sans-serif;
 }
-
+.divider {
+    width: 5px;
+    height: auto;
+    display: inline-block;
+}
 nav{
   height: 80px;
   width: 100%;
@@ -150,7 +154,7 @@ footer{
   padding-top: 5px;
   color: #fff;
 }
-<style >
+
 #foo {
     position: fixed;
     bottom: 0;

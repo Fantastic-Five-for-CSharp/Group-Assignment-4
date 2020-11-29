@@ -1,39 +1,25 @@
 ﻿
-@{
- ViewData["Title"] = "Index";
-}
-<head>
-    <meta charset="utf-8">
-    <title>Welcome</title>
-    <link rel="stylesheet" href="css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="http://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script>
-  $(document).ready(function(){
-    $('#icon').click(function(){
-      $('ul').toggleClass('show');
-    });
-  });
-    </script>
-</head>
-<body>
-
-    @*</nav>*@
     <section>
         <div class="title">
             <h1>All About Parks</h1>
             <p>This is a full-stack web application developed by three graduate students at University of South Florida. This website lets you fetch nantonal park data from data.gov using API. </p>
-            <!-- <button type="button">Learn More</button> -->
-        </div>
+            <p>Click the Button Blow to explore the relative information about Nation Parks</p>
 
+                <div>
+                 <a asp-controller="Home" asp-action="Parks" button type="margin:5px" class="btn btn-info">Explore Park Information</a>
+                </div>
+                <div>
+                <a asp-controller="Home" asp-action="Tours" button type="margin:5px" class="btn btn-info">Explore Tours Information</a>
+                <div>
+                <div>
+                <a asp-controller="Home" asp-action="Filings" button type="margin:5px" class="btn btn-info">Discover Filings</a>
+                </div>
+            </div>
+        </div>
+        </div>
    </section>
 
-        @*<footer>
-            <p>Copyright &copy; 2020, Designed by Shitao Liao, Qian Wang, You Zhou</p>
-        </footer>*@
-    @*</section>*@
+  
 
 
 
-</body>

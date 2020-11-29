@@ -9,7 +9,7 @@
         max-width: 2200px;
         margin-left: auto;
         margin-right: auto;
-    }   
+    }
 </style>
 <h2 align="center"> Tour Information </h2>
 <hr />
@@ -35,26 +35,36 @@
 
         @foreach (var item in Model.data)
         {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.description)
-            </td>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.description)
+                </td>
 
-        </tr>
+            </tr>
         }
-        <tr>
-            <td>
-                <a id="dbopt" asp-controller="Home" asp-action="PopulateSymbols"><img src="~/images/button_save-data.png" /></a>
-            </td>
-        </tr>
+    
+  
     </tbody>
 </table>
+
+<div align="center">
+    <a id="dbopt" asp-controller="Home" asp-action="Tours" align="center" onclick="clickAlert()" value="Click-2-Alert"><img src="~/img/images.jpg" /></a>
+</div>
+<script>
+    alertDbSave(@ViewBag.dbSuccessComp);
+</script>
+
+<script>
+    function clickAlert() {
+        alert("Data Saved !");
+    }
+</script>

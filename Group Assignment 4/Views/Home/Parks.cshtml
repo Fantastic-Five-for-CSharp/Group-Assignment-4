@@ -25,7 +25,7 @@
             <th>
                 Park Code
             </th>
-            
+
             <th>
                 Park Descritpion
             </th>
@@ -35,9 +35,9 @@
     <tbody>
         <tr>
             <td>
-                <li class="nav-item">
-                    <a asp-controller="Home" asp-action="TX" class="btn btn-primary my-2">TX</a>
-                </li>
+                
+               <a asp-controller="Home" asp-action="TX" class="btn btn-primary my-2">TX</a>
+                
             </td>
             <td>
                 Fort Davis
@@ -53,9 +53,9 @@
         </tr>
         <tr>
             <td>
-                <li class="nav-item">
-                    <a asp-controller="Home" asp-action="NY" class="btn btn-primary my-2">NY</a>
-                </li>
+                
+                 <a asp-controller="Home" asp-action="NY" class="btn btn-primary my-2">NY</a>
+                
             </td>
             <td>
                 Fort Stanwix
@@ -71,9 +71,9 @@
 
         <tr>
             <td>
-                <li class="nav-item">
-                    <a asp-controller="Home" asp-action="OH" class="btn btn-primary my-2">OH</a>
-                </li>
+                
+               <a asp-controller="Home" asp-action="OH" class="btn btn-primary my-2">OH</a>
+                
             </td>
             <td>
                 National Aviation
@@ -88,9 +88,9 @@
 
         <tr>
             <td>
-                <li class="nav-item">
-                    <a asp-controller="Home" asp-action="DC" class="btn btn-primary my-2">DC</a>
-                </li>
+                
+                <a asp-controller="Home" asp-action="DC" class="btn btn-primary my-2">DC</a>
+                
             </td>
             <td>
                 National Capital Parks-East
@@ -106,9 +106,9 @@
 
         <tr>
             <td>
-                <li class="nav-item">
-                    <a asp-controller="Home" asp-action="VA" class="btn btn-primary my-2">VA</a>
-                </li>
+                
+               <a asp-controller="Home" asp-action="VA" class="btn btn-primary my-2">VA</a>
+               
             </td>
             <td>
                 Yorktown Battlefield
@@ -124,3 +124,17 @@
 
     </tbody>
 </table>
+
+<div align="center">
+    <a id="dbopt" asp-controller="Home" asp-action="Parks" align="center" onclick="clickAlert()" value="Click-2-Alert"><img src="~/img/images.jpg" /></a>
+</div>
+
+<script>
+    alertDbSave(@ViewBag.dbSuccessComp);
+</script>
+
+<script>
+    function clickAlert() {
+        alert("Data Saved!");
+    }
+</script>
