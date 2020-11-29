@@ -57,14 +57,10 @@
 </table>
 
 <div align="center">
-    <a id="dbopt" asp-controller="Home" asp-action="Tours" align="center" onclick="clickAlert()" value="Click-2-Alert"><img src="~/img/images.jpg" /></a>
+    <form>
+        <a id="dbopt" asp-controller="Home" asp-action="Tours" align="center" onclick="clickAlert()" value="Click-2-Alert"><img src="~/img/images.jpg" /></a>
+    </form>&nbsp;&nbsp;
 </div>
 <script>
     alertDbSave(@ViewBag.dbSuccessComp);
-</script>
-
-<script>
-    function clickAlert() {
-        alert("Data Saved !");
-    }
 </script>

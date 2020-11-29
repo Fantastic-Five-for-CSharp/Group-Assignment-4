@@ -1,0 +1,162 @@
+﻿@{ ViewData["Title"] = "Update"; }
+
+<div class="container bg-white">
+    <div class="row">
+        <div class="col">
+            <div class="pb-2 mt-4 mb-2 border-bottom">
+                <h1 class="text-center">Park Rerod Delete</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center pt-3">
+        <div class="col-10">
+            <form>
+                <div class="form-col justify-content-center">
+                    <div class="form-group col-md-3">
+                        <label for="State">State</label>
+                        <select id="State" class="form-control" style="width:200px; height:40px">
+                            <option>AL</option>
+                            <option>AK</option>
+                            <option>AZ</option>
+                            <option>AR</option>
+                            <option>CA</option>
+                            <option>CO</option>
+                            <option>CT</option>
+                            <option>DE</option>
+                            <option>FL</option>
+                            <option>GA</option>
+                            <option>HI</option>
+                            <option>ID</option>
+                            <option>IL</option>
+                            <option>IN</option>
+                            <option>IA</option>
+                            <option>KS</option>
+                            <option>KY</option>
+                            <option>LA</option>
+                            <option>ME</option>
+                            <option>MD</option>
+                            <option>MA</option>
+                            <option>MI</option>
+                            <option>MN</option>
+                            <option>MS</option>
+                            <option>MO</option>
+                            <option>MT</option>
+                            <option>NE</option>
+                            <option>NV</option>
+                            <option>NH</option>
+                            <option>NJ</option>
+                            <option>NM</option>
+                            <option>NY</option>
+                            <option>NC</option>
+                            <option>ND</option>
+                            <option>OH</option>
+                            <option>OK</option>
+                            <option>OR</option>
+                            <option>PA</option>
+                            <option>PR</option>
+                            <option>RI</option>
+                            <option>SC</option>
+                            <option>SD</option>
+                            <option>TN</option>
+                            <option>TX</option>
+                            <option>UT</option>
+                            <option>VT</option>
+                            <option>VA</option>
+                            <option>VI</option>
+                            <option>WA</option>
+                            <option>WV</option>
+                            <option>WI</option>
+                            <option>WY</option>
+                            <option selected>FL</option>
+                        </select>
+                    </div>
+                    <div class="form-col justify-content-center">
+                        <div class="form-group col-md-3">
+                            <label for="Parks">Park</label>
+                            <select id="Parks" class="form-control" style="width:200px; height:40px">
+                                <option>Acadia</option>
+                                <option>American Samoa</option>
+                                <option>Arches</option>
+                                <option>Badlands</option>
+                                <option>Big Bend dagger</option>
+                                <option>Biscayne</option>
+                                <option>Black Canyon of the Gunnison</option>
+                                <option>Bryce Canyon</option>
+                                <option>Canyonlands</option>
+                                <option>Capitol Reef</option>
+                                <option>Carlsbad Caverns *</option>
+                                <option>Channel Islands dagger</option>
+                                <option>Congaree dagger</option>
+                                <option>Crater Lake</option>
+                                <option>Cuyahoga Valley</option>
+                                <option>Death Valley dagger</option>
+                                <option>Denali dagger</option>
+                                <option>Dry Tortugas dagger</option>
+                                <option>Everglades double-dagger</option>
+                                <option>Gates of the Arctic</option>
+                                <option>Gateway Arch</option>
+                                <option>Glacier Bay double-dagger</option>
+                                <option>Glacier double-dagger</option>
+                                <option>Grand Canyon *</option>
+                                <option>Grand Teton dagger</option>
+                                <option>Great Basin</option>
+                                <option>Great Sand Dunes</option>
+                                <option>Great Smoky Mountains double-dagger</option>
+                                <option>Guadalupe Mountains</option>
+                                <option>Haleakalā dagger</option>
+                                <option>Hawaiʻi Volcanoes double-dagger</option>
+                                <option>Hot Springs</option>
+                                <option>Indiana Dunes</option>
+                                <option>Isle Royale dagger</option>
+                                <option>Joshua Tree dagger</option>
+                                <option>Katmai</option>
+                                <option>Kenai Fjords</option>
+                                <option>Kings Canyon dagger</option>
+                                <option>Kobuk Valley</option>
+                                <option>Lake Clark</option>
+                                <option>Lassen Volcanic</option>
+                                <option>Mammoth Cave double-dagger</option>
+                                <option>Mesa Verde *</option>
+                                <option>Mount Rainier</option>
+                                <option>North Cascades</option>
+                                <option>Olympic double-dagger</option>
+                                <option>Petrified Forest</option>
+                                <option>Pinnacles</option>
+                                <option>Redwood *</option>
+                                <option>Rocky Mountain dagger</option>
+                                <option>Saguaro</option>
+                                <option>Sequoia dagger</option>
+                                <option>Shenandoah</option>
+                                <option>Theodore Roosevelt</option>
+                                <option>Virgin Islands</option>
+                                <option>Voyageurs</option>
+                                <option>White Sands</option>
+                                <option>Wind Cave</option>
+                                <option>Wrangell–St. Elias *</option>
+                                <option>Yellowstone double-dagger</option>
+                                <option>Yosemite *</option>
+                                <option>Zion</option>
+                            </select>
+                        </div>
+                    </div>
+                <div class="form-col justify-content-center">
+                    <div class="form-group col-md-3">
+                        <label for="Description">Description</label>
+                        <input type="text" style="width:800px; height:100px"class="form-control" id="Description" value="Input Your New Description">
+                </div>
+                </div>
+            </form>
+            <br />
+            <br />
+        </div>
+    </div>
+</div>
+<div align="center" class="button">
+    <button type="submit" class="btn btn-primary text-center" onclick="clickAlert()" value="Click-2-Alert">Update</button>
+</div>
+
+<script>
+    function clickAlert() {
+        alert("Record Updated!");
+    }
+</script>

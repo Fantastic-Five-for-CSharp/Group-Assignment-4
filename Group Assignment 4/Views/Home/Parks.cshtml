@@ -12,6 +12,7 @@
     }
 </style>
 <h2 align="center"> Park Information </h2>
+<h5 align="center"> Click any States Name to explore related parks.</h5>
 <hr />
 <table class="table table-responsive-sm table-striped text-center pb-2 mb-2 resp">
     <thead>
@@ -35,9 +36,9 @@
     <tbody>
         <tr>
             <td>
-                
-               <a asp-controller="Home" asp-action="TX" class="btn btn-primary my-2">TX</a>
-                
+
+                <a asp-controller="Home" asp-action="TX" class="btn btn-primary my-2">TX</a>
+
             </td>
             <td>
                 Fort Davis
@@ -53,9 +54,9 @@
         </tr>
         <tr>
             <td>
-                
-                 <a asp-controller="Home" asp-action="NY" class="btn btn-primary my-2">NY</a>
-                
+
+                <a asp-controller="Home" asp-action="NY" class="btn btn-primary my-2">NY</a>
+
             </td>
             <td>
                 Fort Stanwix
@@ -71,9 +72,9 @@
 
         <tr>
             <td>
-                
-               <a asp-controller="Home" asp-action="OH" class="btn btn-primary my-2">OH</a>
-                
+
+                <a asp-controller="Home" asp-action="OH" class="btn btn-primary my-2">OH</a>
+
             </td>
             <td>
                 National Aviation
@@ -88,9 +89,9 @@
 
         <tr>
             <td>
-                
+
                 <a asp-controller="Home" asp-action="DC" class="btn btn-primary my-2">DC</a>
-                
+
             </td>
             <td>
                 National Capital Parks-East
@@ -106,9 +107,9 @@
 
         <tr>
             <td>
-                
-               <a asp-controller="Home" asp-action="VA" class="btn btn-primary my-2">VA</a>
-               
+
+                <a asp-controller="Home" asp-action="VA" class="btn btn-primary my-2">VA</a>
+
             </td>
             <td>
                 Yorktown Battlefield
@@ -120,15 +121,22 @@
                 Discover what it took for the United States to be independent as you explore the site of the last major battle of the Revolutionary War. Here at Yorktown, in the fall of 1781, General George Washington, with allied American and French forces, besieged General Charles Lord Cornwallis’s British army. On October 19, Cornwallis surrendered, effectively ending the war and ensuring independence
             </td>
         </tr>
-        
+
 
     </tbody>
 </table>
 
 <div align="center">
-    <a id="dbopt" asp-controller="Home" asp-action="Parks" align="center" onclick="clickAlert()" value="Click-2-Alert"><img src="~/img/images.jpg" /></a>
+    <form>
+        <a id="dbopt" asp-controller="Home" asp-action="Parks" align="center" onclick="clickAlert()" value="Click-2-Alert"><img src="~/img/images.jpg" /></a>
+    </form>&nbsp;&nbsp;
+    <form>
+        <button type="submit" asp-controller="Home" asp-action="ParkUpdate" class="btn btn-primary btn-sm">Update</button>
+        <button type="submit" asp-controller="Home" asp-action="ParkDelete" class="btn btn-primary btn-sm">Delete</button>
+    </form>
 </div>
 
+</td>
 <script>
     alertDbSave(@ViewBag.dbSuccessComp);
 </script>

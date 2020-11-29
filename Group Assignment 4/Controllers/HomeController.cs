@@ -13,7 +13,7 @@ namespace Federal_Election.Controllers
 {
     public class HomeController : Controller
     {
-        HttpClient httpClient;
+        HttpClient? httpClient;
 
         static string BASE_URL = "https://developer.nps.gov/api/v1/";
         static string API_KEY = "mdBybOievMdeX3eYSC0MhFu3U7xRV18xHAPG04qb"; //Add your API key here inside ""
@@ -169,6 +169,14 @@ namespace Federal_Election.Controllers
             return View();
         }
         public IActionResult VA()
+        {
+            return View();
+        }
+        public IActionResult ParkUpdate()
+        {
+            return View();
+        }
+        public IActionResult ParkDelete()
         {
             return View();
         }

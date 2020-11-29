@@ -37,7 +37,7 @@ namespace Group_Assignment_4
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
             // Setup EF connection - modify the Conguration string
-            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration["Group_Assignment_4:ConnectionStrings"]));
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration["Data:Group_Assignment_4:ConnectionString"]));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
