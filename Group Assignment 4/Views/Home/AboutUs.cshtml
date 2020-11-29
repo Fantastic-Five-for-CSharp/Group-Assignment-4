@@ -6,7 +6,7 @@
 <div class="container">
     <h2 class="jumbotron-heading" align="center">@ViewData["Title"]</h2>
     @*<a align="center" class="btn btn-primary my-2" href="https://github.com/Fantastic-Five-for-CSharp/Group-Assignment-4" target="_blank">GitHub</a>*@
-    
+
 </div>
 
 <table class="table">
@@ -42,7 +42,12 @@
 </table>
 <hr />
 
+<div class="chart">
+    <h2 align="center">Team Contribution</h2>
+</div>
+
 <div class="row">
+
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <div id="chartContainer1" style="width: 31%; height: 160px;display: inline-block;"></div>
     <div id="chartContainer2" style="width: 31%; height: 160px;display: inline-block;"></div>
@@ -57,7 +62,7 @@
                 data: [
                     {
                         type: "pie",
-                        showInLegend: true,
+                        showInLegend: false,
                         indexLabel: "{label} - #percent%",
                         toolTipContent: "<b>{label}:</b> {y} (#percent%)",
                         dataPoints: [
@@ -79,7 +84,7 @@
                 data: [
                     {
                         type: "pie",
-                        showInLegend: true,
+                        showInLegend: false,
                         indexLabel: "{label} - #percent%",
                         toolTipContent: "<b>{label}:</b> {y} (#percent%)",
                         dataPoints: [
@@ -104,7 +109,7 @@
                 data: [
                     {
                         type: "pie",
-                        showInLegend: true,
+                        showInLegend: false,
                         indexLabel: "{label} - #percent%",
                         toolTipContent: "<b>{label}:</b> {y} (#percent%)",
                         dataPoints: [
@@ -120,10 +125,59 @@
 </div>
 <hr />
 <hr />
+
+<div id="parkchart" style="width: 50%; height: 350px;display: inline-block; "></div>
+<script>
+
+    var chart = new CanvasJS.Chart("parkchart",
+        {
+            animationEnabled: true,
+            title: {
+                text: "Number of Parks of state",
+            },
+            axisY: {
+                title: "Number of parks"
+                
+            },
+            axisX: {
+                title: "States"
+            },
+            //options: {
+            //    scales: {
+            //        yAxes: [{
+            //            ticks: {
+            //                beginAtZero: true
+            //            }
+            //        }]
+            //    }
+            //},
+            data: [
+                {
+                    type: "column",
+                    showInLegend: false,
+
+                    dataPoints: [
+                        { y: 11, label: "FL", color: "rgb(135,206,120)" },
+                        { y: 28, label: "CA", color: "rgb(0,191,255)" },
+                        { y: 14, label: "TX", color: "rgb(200,149,237)" },
+                        { y: 25, label: "DC", color: "rgb(100,50,237)" },
+                        { y: 22, label: "AZ", color: "rgb(50,149,200)" },
+                        { y: 24, label: "NY", color: "rgb(170,267,37)" },
+                        { y: 18, label: "MD", color: "rgb(250,149,137)" },
+                        { y: 15, label: "NM", color: "rgb(100,98,37)" },
+                    ]
+                },
+            ]
+        });
+    chart.render();
+</script>
+<hr />
+
+
 <div class="container bg-white">
 
     <h2 align="center">Data Model</h2>
-    <img class="img-custom" src="../img/ERD.png" alt="DataModel">
+    <img class="img-custom" src="../img/ERD.png" alt="DataModel" width="800" height="600" style="margin: auto">
 
 </div>
 
