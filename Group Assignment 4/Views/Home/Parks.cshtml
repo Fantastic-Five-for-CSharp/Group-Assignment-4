@@ -13,20 +13,45 @@
 </style>
 <h2 align="center"> Park Information </h2>
 <hr />
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/jquery.params.js"></script>
+    <script>
+        $(function(){
+             Park = $("#Park").text();
+            
+
+            $("#btn").on("click",function(){
+               jump1();
+            });
+        });
+
+        function jump1(){
+            url = "Details.cshtml?Park="+Park
+            window.location.href = url;
+        }
+    </script>
+</head>
+<div class="row justify-content-center pt-3 pb-1">
+    <div class="col text-center">
+        <a asp-controller="Create" asp-action="Index">Create New Record</a>
+        <a> Or Click Any Park name to see details Information </a>
+    </div>
+
+</div>
+
 <table class="table table-responsive-sm table-striped text-center pb-2 mb-2 resp">
     <thead>
         <tr>
             <th>
-                Park Name
-            </th>
-            <th>
-                Park ID
+                Park
             </th>
             <th>
                 State
             </th>
             <th>
-                Park Descritpion
+                Description
             </th>
         </tr>
     </thead>
@@ -37,11 +62,9 @@
         {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.name)
-            </td>
-
-            <td>
-                @Html.DisplayFor(modelItem => item.id)
+                <li class="nav-item">
+                    <a asp-controller="Home" asp-action="Details" class="btn btn-primary my-2">@Html.DisplayFor(modelItem => item.name)</a>
+                </li>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.states)
@@ -53,10 +76,5 @@
 
         </tr>
         }
-        <tr>
-            <td>
-                <a id="dbopt" asp-controller="Home" asp-action="PopulateSymbols"><img src="~/images/button_save-data.png" /></a>
-            </td>
-        </tr>
     </tbody>
 </table>

@@ -148,5 +148,9 @@ namespace Federal_Election.Controllers
         {
             return View();
         }
+        public IActionResult Details()
+        {
+            return View();
+        }
     }
 }
