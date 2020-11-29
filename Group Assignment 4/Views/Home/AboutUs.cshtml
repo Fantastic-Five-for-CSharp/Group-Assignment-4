@@ -16,7 +16,7 @@
                 <img src="../img/p1.jpg" class="profile-img" width="130" height="140">
                 <h2>Qian Wang</h2>
                 <p>
-                    Qian Wang is a Business Analytics and Information Systems graduate student at University of South Florida. She is a highly effective data analyst with excellent problem-solving skills. She is also a good team player, and is able to lead projects as well as participate actively as a team member. In this assignment, she is responible for update about us page and crud operations.
+                    Qian Wang is a Business Analytics and Information Systems graduate student at University of South Florida. She is a highly effective data analyst with excellent problem-solving skills. She is also a good team player, and is able to lead projects as well as participate actively as a team member. In this assignment, she is responible for data model, update index and about us page and refinement.
                     <a href="https://github.com/Fantastic-Five-for-CSharp/Group-Assignment-4" style="color:#2593D3">Git_page</a>
                 </p>
             </th>
@@ -25,7 +25,7 @@
                 <h2>You Zhou</h2>
                 <p>
                     You Zhou is currently pursuing the BAIS degree in the USF Muma college of Business.He has a background of Business Adminstration and relatied experience in Project Management Process Enhencement.
-                    He worked on api, data display, overall refinement, and deploy of the project.
+                    He worked on api, data display, crud function, and deploy of the project.
                     <a href="https://github.com/Fantastic-Five-for-CSharp/Group-Assignment-4" style="color:#2593D3">Git_page</a>
                 </p>
             </th>
@@ -33,7 +33,7 @@
                 <img src="../img/p3.jpg" class="profile-img" width="130" height="140">
                 <h2>Shitao Liao</h2>
                 <p>
-                    Shitao Liao is now persuing his master's degree in business analytics and information systems at University of South Florida. His interest areas are database design and data analysis. He is responsible for the design of detail page and data model.
+                    Shitao Liao is now persuing his master's degree in business analytics and information systems at University of South Florida. His interest areas are database design and data analysis. He is responsible for the design of detail pages.
                     <a href="https://github.com/Fantastic-Five-for-CSharp/Group-Assignment-4" style="color:#2593D3">Git_page</a>
                 </p>
             </th>
@@ -125,59 +125,76 @@
 </div>
 <hr />
 <hr />
+<h2 align="center">Data Chart</h2>
+@*<div id="parkchart" style="width:50%; height:350px ;display: inline-block;"></div>*@
+<div id="chartContainer" style="height: 500px; width: 100%; align-content:center"></div>
+    <script>
 
-<div id="parkchart" style="width: 50%; height: 350px;display: inline-block; margin-right:250px"></div>
-<script>
-
-    var chart = new CanvasJS.Chart("parkchart",
-        {
-            animationEnabled: true,
-            title: {
-                text: "Number of Parks By State",
-            },
-            axisY: {
-                title: "Number of parks"
-                
-            },
-            axisX: {
-                title: "States"
-            },
-            //options: {
-            //    scales: {
-            //        yAxes: [{
-            //            ticks: {
-            //                beginAtZero: true
-            //            }
-            //        }]
-            //    }
-            //},
-            data: [
-                {
-                    type: "column",
-                    showInLegend: false,
-
-                    dataPoints: [
-                        { y: 11, label: "FL", color: "rgb(135,206,120)" },
-                        { y: 28, label: "CA", color: "rgb(0,191,255)" },
-                        { y: 14, label: "TX", color: "rgb(200,149,237)" },
-                        { y: 25, label: "DC", color: "rgb(100,50,237)" },
-                        { y: 22, label: "AZ", color: "rgb(50,149,200)" },
-                        { y: 24, label: "NY", color: "rgb(170,267,37)" },
-                        { y: 18, label: "MD", color: "rgb(250,149,137)" },
-                        { y: 15, label: "NM", color: "rgb(100,98,37)" },
-                    ]
+        var chart = new CanvasJS.Chart("chartContainer",
+            {
+                animationEnabled: true,
+                title: {
+                    text: "Number of Parks By State",
                 },
-            ]
-        });
-    chart.render();
-</script>
-<hr />
+                axisY: {
+                    title: "Number of parks"
+
+                },
+                axisX: {
+                    title: "States"
+                },
+                //options: {
+                //    scales: {
+                //        yAxes: [{
+                //            ticks: {
+                //                beginAtZero: true
+                //            }
+                //        }]
+                //    }
+                //},
+                data: [
+                    {
+                        type: "column",
+                        showInLegend: false,
+
+                        dataPoints: [
+                            { y: 11, label: "FL", color: "rgb(135,206,120)" },
+                            { y: 28, label: "CA", color: "rgb(0,191,255)" },
+                            { y: 14, label: "TX", color: "rgb(200,149,237)" },
+                            { y: 25, label: "DC", color: "rgb(100,50,237)" },
+                            { y: 22, label: "AZ", color: "rgb(50,149,200)" },
+                            { y: 24, label: "NY", color: "rgb(170,267,37)" },
+                            { y: 18, label: "MD", color: "rgb(250,149,137)" },
+                            { y: 15, label: "NM", color: "rgb(100,98,37)" },
+                        ]
+                    },
+                ]
+            });
+        chart.render();
+    </script>
+
+   
+    <hr />
+    <hr />
 
 
-<div class="container bg-white">
+    <div class="container bg-white">
 
-    <h2 align="center">Data Model</h2>
-    <center><img class="img-custom" src="../img/ERD.png" alt="DataModel" width="800" height="600" style="margin: auto"></center>
+        <h2 align="center">Data Model</h2>
+        <center><img class="img-custom" src="../img/ERD.png" alt="DataModel" width="800" height="600" style="margin: auto"></center>
 
-</div>
+    </div>
+    <hr />
+    <hr />
+
+    <div class="technical">
+        <h2 align="center">Technical Details</h2>
+        <ol style="margin:auto">
+            <li>1. When you click on each states in the park page, you will see the listed national park information of each state.</li>
+            <li>2. The bar chart shows the number of national parks in each state according to the national park service website. You can clear see the compare the number of parks.</li>
+            <li>3. We implemented the crud function which users can reate, read, update, and delete records themselves.</li>
+        </ol>
+    </div>
+    <hr />
+    <hr />
 
